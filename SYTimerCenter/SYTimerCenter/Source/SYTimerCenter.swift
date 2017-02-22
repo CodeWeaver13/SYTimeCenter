@@ -8,13 +8,13 @@
 
 import Foundation
 
-public func ==(lhs: SYTimerCenter.SYTimer, rhs: SYTimerCenter.SYTimer) -> Bool {
-    return lhs.hashValue == rhs.hashValue
-}
-
 public final class SYTimerCenter {
     
     public final class SYTimer: Hashable {
+        public static func ==(lhs: SYTimerCenter.SYTimer, rhs: SYTimerCenter.SYTimer) -> Bool {
+            return lhs.hashValue == rhs.hashValue
+        }
+
         
         fileprivate let timer : DispatchSourceTimer
         
